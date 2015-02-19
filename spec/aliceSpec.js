@@ -55,3 +55,14 @@ describe('type-token', function() {
     expect(result).toEqual('656/2140');
   });
 });
+
+describe('bigrams', function() {
+  it ('returns a list of bigrams', function() {
+    var string = "To be or not to be.";
+
+    var result = bigrams(string);
+
+    expect(result).toEqual([['to', 'be'], ['be', 'or'], ['or', 'not'], ['not', 'to'], ['to', 'be']]);
+  });
+
+});

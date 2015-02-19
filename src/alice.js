@@ -47,3 +47,14 @@ function typeToken(string) {
 
   return result;
 }
+
+function bigrams(string) {
+  var noPunct = string.replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+  var stringArray = noPunct.split(' ');
+  var bigramArray = [];
+  for (var i = 0; i < stringArray.length - 1; i++) {
+    bigramArray.push([stringArray[i].toLowerCase(), stringArray[i+1].toLowerCase()]);
+  }
+
+  return bigramArray;
+}
