@@ -38,3 +38,12 @@ function uniqueWords(string) {
   }
   return uniqueArray.length;
 }
+
+function typeToken(string) {
+  var stringWordCount = wordCount(string).toString();
+  var stringUniqueWords = uniqueWords(string).toString();
+
+  var result = stringUniqueWords.concat('/', stringWordCount);
+
+  return result;
+}

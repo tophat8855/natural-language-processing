@@ -37,3 +37,21 @@ describe('unique words', function() {
     expect(result).toEqual(656);
   });
 });
+
+describe('type-token', function() {
+  it('returns the type-token ration (unique words/total words)', function() {
+    var string = "To be or not to be.";
+
+    var result = typeToken(string);
+
+    expect(result).toEqual('4/6');
+  });
+
+  it('returns the type-token of the chapter', function() {
+    var string = alice;
+
+    var result = typeToken(string);
+
+    expect(result).toEqual('656/2140');
+  });
+});
